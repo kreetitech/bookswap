@@ -1,4 +1,36 @@
 Bookswap::Application.routes.draw do
+  get "wishlists/index"
+
+  get "wishlists/create"
+
+  get "wishlists/destroy"
+
+  get "inventries/index"
+
+  get "inventries/create"
+
+  get "inventries/destroy"
+
+  get "books/index"
+
+  get "books/create"
+
+  get "books/update"
+
+  get "books/destroy"
+
+  get "user_sessions/new"
+
+
+  get "home/index"
+
+ 
+  resources :user_sessions
+
+  match 'login' => "user_sessions#new",      :as => :login
+  match 'logout' => "user_sessions#destroy", :as => :logout
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -55,4 +87,5 @@ Bookswap::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
+ root :to => 'home#index'
 end
