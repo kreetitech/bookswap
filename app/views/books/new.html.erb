@@ -1,0 +1,39 @@
+<h1>Index
+  <%= form_for @book do |f| %>
+  <%= f.error_messages %></h1>
+
+<div>
+  <%= f.label :Add To %>
+  <%= f.text_field :Add To% ></div>
+
+<div>
+  <%= f.label :Book Title %>
+  <%= f.text_field :Book Title %></div>
+
+<div>
+  <%= f.label :Author %>
+  <%= f.text_field :Author %></div>
+
+<div>
+  <%= f.label :ISBN %>
+  <%= f.text_field :ISBN %></div>
+
+<div>
+  <%= f.label :Book Condition %>
+  <%= f.text_field :Book Condition %></div>
+
+<div>
+  <%= f.label :Category %>
+  <%= f.text_field :Category %></div>
+
+<div>
+  <%= f.label :Subject %>
+  <%= f.text_field :Subject %></div>
+
+<div>
+  <%= f.label :Description %>
+  <%= f.text_field :Description %></div>
+
+<div>
+  <%= f.submit "Add Book" %></div>
+<% end %>

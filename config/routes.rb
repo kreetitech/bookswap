@@ -1,31 +1,10 @@
 Bookswap::Application.routes.draw do
-  get "wishlists/index"
-
-  get "wishlists/create"
-
-  get "wishlists/destroy"
-
-  get "inventries/index"
-
-  get "inventries/create"
-
-  get "inventries/destroy"
-
-  get "books/index"
-
-  get "books/create"
-
-  get "books/update"
-
-  get "books/destroy"
-
-  get "user_sessions/new"
-
-
   get "home/index"
 
- 
   resources :user_sessions
+  resources :books
+  resources :wishlists
+  resources :inventories
 
   match 'login' => "user_sessions#new",      :as => :login
   match 'logout' => "user_sessions#destroy", :as => :logout
