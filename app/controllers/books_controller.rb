@@ -7,7 +7,7 @@ class BooksController < ApplicationController
   end
 
   def create
-    @user = User.first # replace with current user
+    @user =User.first # replace with current user
     @user.books.create(params[:book])
   end
 
