@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   acts_as_authentic
-  validates :display_name, :uniqueness => true
+  validates :login, :uniqueness => true
   validates :email, :uniqueness => true
 
   has_many :books

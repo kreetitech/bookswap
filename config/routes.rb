@@ -1,11 +1,19 @@
 Bookswap::Application.routes.draw do
-  get "home/index"
+  get "users/index"
 
+  get "users/new"
+
+  get "users/create"
+
+  get "users/show"
+
+  get "home/index"
+  resources :users
   resources :user_sessions
   resources :books
   resources :wishlists
   resources :inventories
-
+  match 'signup' => "users#new",	     :as => :signup
   match 'login' => "user_sessions#new",      :as => :login
   match 'logout' => "user_sessions#destroy", :as => :logout
 
