@@ -1,5 +1,6 @@
 <h1>Listing Of Books
 </h1>
+
 <table>
 <tr>
 <th>BookTitle<th>
@@ -18,7 +19,9 @@
 <td><%= book.isbn %></td>
 <td><%= book.condition %>
 </tr>
-</table>
-<%= link_to 'Add To inventory',create_inventory_path %>
-<%= link_to 'Add to wishlist',create_wishlist_path %>
+</table><%= link_to 'Add To Inventory',new_inventry_path %>
+<%= link_to 'Add to Wishlist',new_wishlist_path %>
 <% end %>
+<h2><%= link_to "Create a NewBook", new_book_path %>
+</h2>
+

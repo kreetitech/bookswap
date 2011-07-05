@@ -13,6 +13,10 @@ class BooksController < ApplicationController
   def create
     @user =User.first # replace with current user
     @user.books.create(params[:book])
+    #@books = Book.new(params[:book])
+    #if @books.save!
+      #redirect_to @books
+    #end
   end
 
   def update
