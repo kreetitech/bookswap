@@ -1,27 +1,29 @@
-<h1>Listing Of Books
-</h1>
+<h1>Listing Of Books</h1>
 
 <table>
-<tr>
-<th>BookTitle<th>
-<th>Author</th>
-<th>Description</th>
-<th>Language</th>
-<th>ISBN</th>
-<th>Bookcondition</th>
-</tr>
-<%= @books.each do |book| %>
-<tr>
-<td>%= book.title %</td>
-<td><%= book.author %></td>
-<td><%= book.description %></td>
-<td><%= book.language %></td>
-<td><%= book.isbn %></td>
-<td><%= book.condition %>
-</tr>
-</table><%= link_to 'Add To Inventory',new_inventry_path %>
-<%= link_to 'Add to Wishlist',new_wishlist_path %>
-<% end %>
-<h2><%= link_to "Create a NewBook", new_book_path %>
-</h2>
+  <tr>
+    <th>BookTitle<th>
+    <th>Author</th>
+    <th>Description</th>
+    <th>Language</th>
+    <th>ISBN</th>
+    <th>Bookcondition</th>
+    <th></th>
+  </tr>
+  <% @books.each do |book| %>
+  <tr>
+    <td><%= book.title %></td>
+    <td><%= book.author %></td>
+    <td><%= book.description %></td>
+    <td><%= book.language %></td>
+    <td><%= book.isbn %></td>
+    <td><%= book.condition %></td>
+    <td>
+      <%= link_to 'Add To Inventory',new_inventry_path %>
+      <%= link_to 'Add to Wishlist',new_wishlist_path %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+<h2><%= link_to "Create a NewBook", new_book_path %></h2>
 

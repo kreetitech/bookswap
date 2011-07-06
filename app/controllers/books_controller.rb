@@ -3,7 +3,6 @@ class BooksController < ApplicationController
    @books = Book.all
   end
    def show
-    @books = Book.find(params[:id])
      @title = @books.title
     end
   def new
@@ -15,8 +14,8 @@ class BooksController < ApplicationController
     @user.books.create(params[:book])
     #@books = Book.new(params[:book])
     #if @books.save!
-      #redirect_to @books
-    #end
+     # redirect_to @books
+   # end
   end
 
   def update
