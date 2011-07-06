@@ -1,0 +1,22 @@
+<div id="title_bar" class="clearfix">
+  <%= link_to(image_tag("logo.png", :width=>"103", :height=>"72", :alt=>"", :class=>"all"), root_path) %>
+  <h1 class="all">Book Swap</h1>
+  <ul class="alr">
+    <% if current_user %>
+      <li><%= link_to "sign out", logout_path %></li>
+    <% else %>
+      <li><%= link_to "sign in", login_path %></li>
+      <li><%= link_to "register", signup_path %></li>
+    <% end %>
+    <li><a href="#">tour</a></li>
+  </ul>
+</div>
+
+<div id="search_bar">
+  <h3 class="all">Search</h3>
+  <input class="all" type="text" />
+  <select class="all">
+    <option></option>
+  </select>
+  <a href="#"><img src="images/search_icon.png" width="21" height="21" alt="" /></a>
+</div>
