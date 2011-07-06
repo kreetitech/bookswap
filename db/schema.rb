@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(:version => 20110630125302) do
     t.datetime "updated_at"
   end
 
+  add_index "books", ["user_id"], :name => "fk_books_user_id_users_id"
+
   create_table "inventries", :force => true do |t|
     t.integer  "user_id"
     t.integer  "book_id"

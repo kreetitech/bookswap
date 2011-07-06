@@ -1,2 +1,21 @@
-<h1>Inventries#index</h1>
-<p>Find me in app/views/inventries/index.html.erb</p>
+<h1>My Inventry</h1>
+<table>
+<tr>
+<th>BookTitle<th>
+<th>Author</th>
+<th>Description</th>
+<th>Language</th>
+<th>ISBN</th>
+<th>Bookcondition</th>
+</tr>
+<%= @books.each do |mi| %>
+<tr>
+<td>%= mi.title %</td>
+<td><%= mi.author %></td>
+<td><%= mi.description %></td>
+<td><%= mi.language %></td>
+<td><%= mi.isbn %></td>
+<td><%= mi.condition %>
+</tr>
+</table>
+<% end %>
