@@ -1,15 +1,5 @@
+<h1><center>welcome user </center></h1>
 
+<%= link_to 'logout', logout_path %>
+<%= link_to "Create a new book", new_book_path if current_user %>
 
-<p>
-  <b> first_name:</b>
-  <%= @user.first_name %>
-</p>
-
-<p>
-  <b> last_name:</b>
-  <%= @user.last_name %>
-</p>
-<p>
-  <b> email:</b>
-  <%= @user.email %>
-</p>

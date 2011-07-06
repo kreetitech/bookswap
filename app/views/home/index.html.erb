@@ -1,4 +1,83 @@
-<h1>Welcome to bookswap</h1>
-<%= link_to "Create a new book", new_book_path %>
-<%= link_to "Login", login_path unless current_user %>
-<%= link_to "Logout", logout_path if current_user %>
+<div id="welcome_box">
+  <div id="content_right">
+    <ul>
+      <li class="clearfix">
+        <img src="images/book_img1.png" width="57" height="57" alt="" class="all" />
+        <p>Sam</p>
+        <p>added: <a href="#">"Mirror Image"</a></p>
+        <p class="light">an hour ago</p>
+      </li>
+      <li class="clearfix">
+        <img src="images/book_img2.png" width="57" height="57" alt="" class="all" />
+        <p>Princess</p>
+        <p>added: <a href="#">"Brida"</a></p>
+        <p class="light">fifteen minutes back</p>
+      </li>
+      <li class="clearfix">
+        <img src="images/book_img3.png" width="57" height="57" alt="" class="all" />
+        <p class="light">Paula</p>
+        <p class="light">added: <a href="#" class="light">"Brida"</a></p>
+        <p class="light">fifteen minutes back</p>
+      </li>
+    </ul>
+  </div>
+
+  <div id="content_left" class="clearfix">
+    <img src="images/welcome_img.png" width="198" height="234" alt="" class="all" />
+    <p>Welcome to Book Swap!<br />
+      Here you can swap books, share books, give away used
+      books and get the books you want.<br /><br />It is the best place to make optimum use of your<br />
+      old stack of books by giving away to those who need them
+      and getting books we want from them.</p>
+    <a href="#" class="register all">REGISTER</a>
+    <a href="#" class="start-tour all">START THE TOUR</a>
+  </div>
+</div>
+
+<div id="recent_people" class="clearfix">
+  <div id="header_recent_people">
+    <h2>People Recently on Books Swap</h2>
+  </div>
+  <ul>
+    <li>
+      <img src="images/people_img1.png" width="57" height="57" alt="" />
+      <p>Paula</p>
+      <p>144 books</p>
+    </li>
+    <li>
+      <img src="images/people_img2.png" width="57" height="57" alt="" />
+      <p>Sam</p>
+      <p>900 books</p>
+    </li>
+    <li>
+      <img src="images/people_img2.png" width="57" height="57" alt="" />
+      <p>Johnny</p>
+      <p>21 books</p>
+    </li>
+    <li>
+      <img src="images/people_img1.png" width="57" height="57" alt="" />
+      <p>Princess</p>
+      <p>144 books</p>
+    </li>
+    <li>
+      <img src="images/people_img2.png" width="57" height="57" alt="" />
+      <p>Sam</p>
+      <p>900 books</p>
+    </li>
+    <li>
+      <img src="images/people_img1.png" width="57" height="57" alt="" />
+      <p>Nigella</p>
+      <p>1 book</p>
+    </li>
+    <li>
+      <img src="images/people_img2.png" width="57" height="57" alt="" />
+      <p>Johnny</p>
+      <p>21 books</p>
+    </li>
+    <li>
+      <img src="images/people_img1.png" width="57" height="57" alt="" />
+      <p>Paula</p>
+      <p>144 books</p>
+    </li>
+  </ul>
+</div>
