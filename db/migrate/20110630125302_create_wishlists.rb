@@ -5,6 +5,8 @@ class CreateWishlists < ActiveRecord::Migration
       t.integer:book_id
       t.timestamps
     end
+    add_foreign_key :wishlists, :user_id, :users, :id
+    add_foreign_key :wishlists, :book_id, :books, :id
   end
 
   def self.down

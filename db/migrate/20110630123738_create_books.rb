@@ -14,6 +14,7 @@ class CreateBooks < ActiveRecord::Migration
     end
 
     add_foreign_key :books, :user_id, :users, :id
+
   end
 
   def self.down
