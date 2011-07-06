@@ -40,3 +40,5 @@ module Bookswap
     config.filter_parameters += [:password]
   end
 end
+
+require "foreign_key_migrate"
