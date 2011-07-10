@@ -14,7 +14,7 @@ class BooksController < ApplicationController
     @user.books.create(params[:book])
     #@books = Book.new(params[:book])
     #if @books.save!
-     # redirect_to @books
+      #redirect_to @book
    # end
   end
 

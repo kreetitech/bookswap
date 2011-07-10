@@ -1,21 +1,22 @@
 <h1>My Inventry</h1>
 <table>
-<tr>
-<th>BookTitle<th>
-<th>Author</th>
-<th>Description</th>
-<th>Language</th>
-<th>ISBN</th>
-<th>Bookcondition</th>
-</tr>
-<%= @books.each do |mi| %>
-<tr>
-<td>%= mi.title %</td>
-<td><%= mi.author %></td>
-<td><%= mi.description %></td>
-<td><%= mi.language %></td>
-<td><%= mi.isbn %></td>
-<td><%= mi.condition %>
-</tr>
+  <tr>
+    <th>BookTitle<th>
+    <th>Author</th>
+    <th>Description</th>
+    <th>Language</th>
+    <th>ISBN</th>
+    <th>Bookcondition</th>
+  </tr>
+  <% @inventries.each do |mi| %>
+  <tr>
+    <tr>
+    <td><%= mi.title %></td>
+    <td><%= mi.author %></td>
+    <td><%= mi.description %></td>
+    <td><%= mi.language %></td>
+    <td><%= mi.isbn %></td>
+    <td><%= mi.condition %></td>
+  </tr>
 </table>
 <% end %>

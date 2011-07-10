@@ -1,4 +1,7 @@
 <h1>Listing Of Books</h1>
+<li><%= link_to 'Inventry', inventries_path %></li>
+<li><%= link_to 'Wistlist', wishlists_path %></li>
+<li><%= link_to 'Create a NewBook', new_book_path%></li>
 
 <table>
   <tr>
@@ -19,11 +22,11 @@
     <td><%= book.isbn %></td>
     <td><%= book.condition %></td>
     <td>
-      <%= link_to 'Add To Inventory',new_inventry_path %>
+      <%= link_to 'Add To Inventry', inventries_path(:book_id => book.id), "data-method" => "POST" %>
       <%= link_to 'Add to Wishlist',new_wishlist_path %>
     </td>
   </tr>
   <% end %>
 </table>
-<h2><%= link_to "Create a NewBook", new_book_path %></h2>
+
 

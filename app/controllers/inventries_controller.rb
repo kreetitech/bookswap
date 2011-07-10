@@ -3,18 +3,12 @@ class InventriesController < ApplicationController
     @inventries=Inventry.all
   end
   def new
-   @inventries = Inventry.new(params[:inventry])
-    if @inventries.save!
-      redirect_to @inventries
-    else
-      @title = "AddToInventry"
-     # render 'new'
-      render :action => :new
+   @user =User.first 
+   @use.books.inventries.create(params[:inventry])
     end
-  end
 
   def show
-
+ @title = @books.title
   end
   def destroy
   end
