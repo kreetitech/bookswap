@@ -11,9 +11,9 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params[:user])
-    if @user.save!
-      redirect_to @book
+    @users = User.new(params[:user])
+    if @users.save!
+      redirect_to @books
     else
       @title = "Sign up"
       render 'new'
@@ -21,8 +21,8 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = User.first
 
   end
-
+ 
 end

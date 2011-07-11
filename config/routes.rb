@@ -17,9 +17,12 @@ Bookswap::Application.routes.draw do
   match 'signup' => "users#new",	     :as => :signup
   match 'login' => "user_sessions#new",      :as => :login
   match 'logout' => "user_sessions#destroy", :as => :logout
-
-
-  # The priority is based upon order of creation:
+  match 'myaccount' => "users#show", :as => :show
+  match 'mybook' => "books#index", :as => :mybook
+  match 'books' => "books#index", :as => :books
+  match 'Browse' => "books#index", :as => :Browse
+  #match 'inventries' => "inventries#show", :as => :inventries
+  # The priority is based upon order of creation:   
   # first created -> highest priority.
 
   # Sample of regular route:
