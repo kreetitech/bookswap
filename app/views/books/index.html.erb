@@ -19,7 +19,7 @@
     <td><%= book.isbn %></td>
     <td><%= book.condition %></td>
     <td>
-      <%= link_to 'Add To Inventory',new_inventry_path %>
+      <%= link_to 'Add To Inventory',inventories_path(:book_id => book.id), "data-method" => "POST" %>
       <%= link_to 'Add to Wishlist',new_wishlist_path %>
     </td>
   </tr>

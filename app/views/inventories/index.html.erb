@@ -1,4 +1,4 @@
-<h1>My Inventry</h1>
+<h1>My Inventory</h1>
 <table>
 <tr>
 <th>BookTitle<th>
@@ -8,14 +8,15 @@
 <th>ISBN</th>
 <th>Bookcondition</th>
 </tr>
-<%= @books.each do |mi| %>
+<% @inventory.book_id do |mi| %>
 <tr>
-<td>%= mi.title %</td>
+<td><%= mi.title %></td>
 <td><%= mi.author %></td>
 <td><%= mi.description %></td>
 <td><%= mi.language %></td>
 <td><%= mi.isbn %></td>
 <td><%= mi.condition %>
 </tr>
-</table>
 <% end %>
+</table>
+
