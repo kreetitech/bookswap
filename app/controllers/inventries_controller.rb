@@ -1,16 +1,16 @@
 class InventriesController < ApplicationController
   def index
-    @inventries=Inventry.all
+    @inventries=current_user.inventries
   end
-  def new
-   @user =User.first 
-   @use.books.inventries.create(params[:inventry])
-    end
-
+  
   def show
- @title = @books.title
+   @inventries=current_user.inventries
   end
   def destroy
   end
 
+ def create
+   current_user.inventries.create(params[:book_id])
+   redirect_to books_path
+ end
 end
