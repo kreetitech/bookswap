@@ -4,4 +4,6 @@ class User < ActiveRecord::Base
   validates :email, :uniqueness => true
 
   has_many :books
+  has_many :inventries
+  has_many :wishlists
 end
