@@ -1,14 +1,5 @@
 Bookswap::Application.routes.draw do
-  get "users/index"
-
-  get "users/new"
-
-  get "users/create"
-
-  get "users/show"
-
-  get "home/index"
-
+ 
   resources :users
   resources :user_sessions
   resources :books
@@ -17,10 +8,7 @@ Bookswap::Application.routes.draw do
   match 'signup' => "users#new",	     :as => :signup
   match 'login' => "user_sessions#new",      :as => :login
   match 'logout' => "user_sessions#destroy", :as => :logout
-  match 'myaccount' => "users#show", :as => :show
-  match 'mybook' => "books#index", :as => :mybook
-  match 'books' => "books#index", :as => :books
-  match 'Browse' => "books#index", :as => :Browse
+ 
   #match 'inventries' => "inventries#show", :as => :inventries
   # The priority is based upon order of creation:   
   # first created -> highest priority.

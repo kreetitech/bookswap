@@ -1,8 +1,8 @@
 class CreateInventries < ActiveRecord::Migration
   def self.up
     create_table :inventries do |t|
-      t.integer:user_id
-      t.integer:book_id
+      t.integer:user_id, :null => false
+      t.integer:book_id, :null => false
       t.timestamps
     end
     add_foreign_key :inventries, :user_id, :users, :id

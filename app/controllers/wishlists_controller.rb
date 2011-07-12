@@ -1,10 +1,10 @@
 class WishlistsController < ApplicationController
   def index
-     @wishlists=Wishlist.all
+    @wishlists=current_user.wishlists
   end
 
   def create
-     @user =User.first 
+     @user =User.firstcurrent_user 
     @user.books.wishlists.create(params[:wishlist])
   end
 

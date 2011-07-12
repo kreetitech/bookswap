@@ -10,7 +10,7 @@ class InventriesController < ApplicationController
   end
 
  def create
-   current_user.inventries.create(params[:book_id])
+   current_user.inventries.create(:book_id => params[:book_id])
    redirect_to books_path
  end
 end
