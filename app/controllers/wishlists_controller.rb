@@ -4,8 +4,8 @@ class WishlistsController < ApplicationController
   end
 
   def create
-     @user =User.firstcurrent_user 
-    @user.books.wishlists.create(params[:wishlist])
+   current_user.inventories.create(:book_id => params[:book_id])
+   redirect_to books_path
   end
 
   def show

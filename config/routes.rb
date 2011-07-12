@@ -2,7 +2,11 @@ Bookswap::Application.routes.draw do
  
   resources :users
   resources :user_sessions
-  resources :books
+  resources :books do
+   collection do
+    get :browse
+   end
+  end
   resources :wishlists
   resources :inventories
   match 'signup' => "users#new",	     :as => :signup

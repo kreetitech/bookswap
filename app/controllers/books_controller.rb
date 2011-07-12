@@ -10,7 +10,7 @@ class BooksController < ApplicationController
   end
 
   def create
-    @user =User.first # replace with current user
+    @user =current_user # replace with current user
     @user.books.create(params[:book])
     #@books = Book.new(params[:book])
     #if @books.save!
@@ -26,5 +26,7 @@ class BooksController < ApplicationController
   @book.destroy
   redirect_to @book
   end
-
+ def browse
+@books=Book.where("user_id != #{current_user.id}")
+ end
 end

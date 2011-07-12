@@ -11,12 +11,12 @@
   <% @wishlists.each do |mw| %>
   <tr>
     <tr>
-    <td><%= mw.title %></td>
-    <td><%= mw.author %></td>
-    <td><%= mw.description %></td>
-    <td><%= mw.language %></td>
-    <td><%= mw.isbn %></td>
-    <td><%= mw.condition %></td>
+    <td><%= mw.book.title %></td>
+    <td><%= mw.book.author %></td>
+    <td><%= mw.book.description %></td>
+    <td><%= mw.book.language %></td>
+    <td><%= mw.book.isbn %></td>
+    <td><%= mw.book.condition %></td>
   </tr>
 </table>
 <% end %>
