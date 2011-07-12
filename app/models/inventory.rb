@@ -1,4 +1,4 @@
-class Inventry < ActiveRecord::Base
+class Inventory < ActiveRecord::Base
   belongs_to :user
   belongs_to :book
 end

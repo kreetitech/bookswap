@@ -4,7 +4,7 @@ Bookswap::Application.routes.draw do
   resources :user_sessions
   resources :books
   resources :wishlists
-  resources :inventries
+  resources :inventories
   match 'signup' => "users#new",	     :as => :signup
   match 'login' => "user_sessions#new",      :as => :login
   match 'logout' => "user_sessions#destroy", :as => :logout
