@@ -1,5 +1,5 @@
 <h1>Listing Of Books</h1>
-<li><%= link_to 'Inventory', inventories_path %></li>
+<li><%= link_to 'Inventry', inventries_path %></li>
 <li><%= link_to 'Wistlist', wishlists_path %></li>
 <li><%= link_to 'add a NewBook', new_book_path%></li>
 <li><%= link_to 'browse', browse_books_path%></li>
@@ -23,7 +23,12 @@
     <td><%= book.isbn %></td>
     <td><%= book.condition %></td>
     <td>
+<<<<<<< HEAD
       <%= link_to 'Add To Inventory', inventories_path(:book_id => book.id), "data-method" => :post %>
+=======
+      <%= link_to 'Add To Inventry', inventries_path(:book_id => book.id), "data-method" => :post %>
+      <%= link_to 'Add to Wishlist',new_wishlist_path %>
+>>>>>>> 0b40f75... rename of inventry to inventory
       <td><%= link_to 'Destroy', book, :confirm => 'Are you sure?', :method => :delete %></td>
     </td>
   </tr>
