@@ -8,7 +8,7 @@ Bookswap::Application.routes.draw do
    end
   end
   resources :wishlists
-  resources :inventries
+  resources :inventories
   match 'signup' => "users#new",	     :as => :signup
   match 'login' => "user_sessions#new",      :as => :login
   match 'logout' => "user_sessions#destroy", :as => :logout
