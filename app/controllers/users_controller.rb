@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   def create
     @users = User.new(params[:user])
     if @users.save!
-      redirect_to @books
+      redirect_to @users
     else
       @title = "Sign up"
       render 'new'
@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = current_user
+    @user = current_User
 
   end
  

@@ -1,0 +1,23 @@
+<h1>New Addition To My Inventory</h1>
+<table>
+<tr>
+<th>BookTitle<th>
+<th>Author</th>
+<th>Description</th>
+<th>Language</th>
+<th>ISBN</th>
+<th>Bookcondition</th>
+</tr>
+
+<% @inventory.book_id do |ni|  %>
+
+<tr>
+<td>%= ni.title %</td>
+<td><%= ni.author %></td>
+<td><%= ni.description %></td>
+<td><%= ni.language %></td>
+<td><%= ni.isbn %></td>
+<td><%= ni.condition %>
+</tr>
+</table>
+<% end %>

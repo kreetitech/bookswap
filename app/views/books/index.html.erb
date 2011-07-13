@@ -24,7 +24,6 @@
     <td><%= book.condition %></td>
     <td>
       <%= link_to 'Add To Inventory', inventories_path(:book_id => book.id), "data-method" => :post %>
-      
       <td><%= link_to 'Destroy', book, :confirm => 'Are you sure?', :method => :delete %></td>
     </td>
   </tr>
