@@ -1,9 +1,4 @@
-<h1>Listing Of Books</h1>
-<li><%= link_to 'Inventory', inventories_path %></li>
-<li><%= link_to 'Wistlist', wishlists_path %></li>
-<li><%= link_to 'add a NewBook', new_book_path%></li>
-<li><%= link_to 'browse', browse_books_path%></li>
-
+<h1>Browse Books</h1>
 <table>
   <tr>
     <th>BookTitle<th>
@@ -16,6 +11,7 @@
   </tr>
   <% @books.each do |book| %>
   <tr>
+    <td><%= image_tag(book.photo.url(:thumb)) %></td>
     <td><%= book.title %></td>
     <td><%= book.author %></td>
     <td><%= book.description %></td>

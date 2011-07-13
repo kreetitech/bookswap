@@ -10,37 +10,40 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110706115733) do
+ActiveRecord::Schema.define(:version => 20110713124801) do
 
   create_table "books", :force => true do |t|
-    t.integer  "user_id",       :null => false
-    t.string   "title",         :null => false
-    t.string   "author",        :null => false
+    t.integer  "user_id",            :null => false
+    t.string   "title",              :null => false
+    t.string   "author",             :null => false
     t.string   "description"
     t.string   "condition"
     t.string   "isbn"
-    t.string   "language",      :null => false
-    t.integer  "book_category", :null => false
+    t.string   "language",           :null => false
+    t.integer  "book_category",      :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
-  create_table "inventries", :force => true do |t|
+  add_index "books", ["user_id"], :name => "fk_books_user_id_users_id"
+
+  create_table "inventories", :force => true do |t|
     t.integer  "user_id"
     t.integer  "book_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "photos", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+  add_index "inventories", ["book_id"], :name => "fk_inventories_book_id_books_id"
+  add_index "inventories", ["user_id"], :name => "fk_inventories_user_id_users_id"
 
   create_table "users", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "display_name"
     t.string   "password"
     t.text     "postal_address"
     t.string   "city"
@@ -48,13 +51,17 @@ ActiveRecord::Schema.define(:version => 20110706115733) do
     t.string   "pincode"
     t.string   "country"
     t.string   "phone"
-    t.string   "login",             :null => false
-    t.string   "email",             :null => false
-    t.string   "crypted_password",  :null => false
-    t.string   "password_salt",     :null => false
-    t.string   "persistence_token", :null => false
+    t.string   "login",              :null => false
+    t.string   "email",              :null => false
+    t.string   "crypted_password",   :null => false
+    t.string   "password_salt",      :null => false
+    t.string   "persistence_token",  :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
@@ -62,10 +69,13 @@ ActiveRecord::Schema.define(:version => 20110706115733) do
   add_index "users", ["persistence_token"], :name => "index_users_on_persistence_token", :unique => true
 
   create_table "wishlists", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "book_id"
+    t.integer  "user_id",    :null => false
+    t.integer  "book_id",    :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "wishlists", ["book_id"], :name => "fk_wishlists_book_id_books_id"
+  add_index "wishlists", ["user_id"], :name => "fk_wishlists_user_id_users_id"
 
 end

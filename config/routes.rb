@@ -3,17 +3,18 @@ Bookswap::Application.routes.draw do
   resources :users
   resources :user_sessions
   resources :books do
-   collection do
-    get :browse
-   end
+    collection do
+      get :browse, :search
+    end
   end
   resources :wishlists
   resources :inventories
 
- 
+
   match 'signup' => "users#new",       :as => :signup
   match 'login' => "user_sessions#new",      :as => :login
   match 'logout' => "user_sessions#destroy", :as => :logout
+  match 'mybooks' => "books#index", :as => :mybooks, :mybooks => true
 
 
 
