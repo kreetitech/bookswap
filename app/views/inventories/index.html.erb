@@ -1,4 +1,4 @@
-<h1>My Inventry</h1>
+<h1>My Inventory</h1>
 <table>
 <tr>
     <th>BookTitle<th>
@@ -8,7 +8,7 @@
     <th>ISBN</th>
     <th>Bookcondition</th>
   </tr>
-  <% @inventries.each do |mi| %>
+  <% @inventories.each do |mi| %>
   <% if mi.book %>
   <tr>
     <tr>
@@ -18,7 +18,8 @@
     <td><%= mi.book.language %></td>
     <td><%= mi.book.isbn %></td>
     <td><%= mi.book.condition %></td>
-  </tr>
+  </tr> 
+  <% end %>
   <% end %>
 </table>
 

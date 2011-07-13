@@ -3,7 +3,7 @@ class BooksController < ApplicationController
    @books = current_user.books
   end
    def show
-     @title = @books.title
+     @books = current_user.books
     end
   def new
     @books = Book.new
