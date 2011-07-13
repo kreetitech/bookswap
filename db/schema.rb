@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110630125302) do
+ActiveRecord::Schema.define(:version => 20110706115733) do
 
   create_table "books", :force => true do |t|
     t.integer  "user_id",       :null => false
@@ -25,21 +25,22 @@ ActiveRecord::Schema.define(:version => 20110630125302) do
     t.datetime "updated_at"
   end
 
-  add_index "books", ["user_id"], :name => "fk_books_user_id_users_id"
-
-  create_table "inventories", :force => true do |t|
+  create_table "inventries", :force => true do |t|
     t.integer  "user_id"
     t.integer  "book_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "inventories", ["book_id"], :name => "fk_inventories_book_id_books_id"
-  add_index "inventories", ["user_id"], :name => "fk_inventories_user_id_users_id"
+  create_table "photos", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "display_name"
     t.string   "password"
     t.text     "postal_address"
     t.string   "city"
@@ -61,13 +62,10 @@ ActiveRecord::Schema.define(:version => 20110630125302) do
   add_index "users", ["persistence_token"], :name => "index_users_on_persistence_token", :unique => true
 
   create_table "wishlists", :force => true do |t|
-    t.integer  "user_id",    :null => false
-    t.integer  "book_id",    :null => false
+    t.integer  "user_id"
+    t.integer  "book_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "wishlists", ["book_id"], :name => "fk_wishlists_book_id_books_id"
-  add_index "wishlists", ["user_id"], :name => "fk_wishlists_user_id_users_id"
 
 end

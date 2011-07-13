@@ -1,5 +1,5 @@
 Bookswap::Application.routes.draw do
- 
+
   resources :users
   resources :user_sessions
   resources :books do
@@ -9,12 +9,16 @@ Bookswap::Application.routes.draw do
   end
   resources :wishlists
   resources :inventories
-  match 'signup' => "users#new",	     :as => :signup
+
+ 
+  match 'signup' => "users#new",       :as => :signup
   match 'login' => "user_sessions#new",      :as => :login
   match 'logout' => "user_sessions#destroy", :as => :logout
- 
+
+
+
   #match 'inventries' => "inventries#show", :as => :inventries
-  # The priority is based upon order of creation:   
+  # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:

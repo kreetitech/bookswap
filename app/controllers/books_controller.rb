@@ -19,6 +19,9 @@ class BooksController < ApplicationController
   end
 
   def update
+    @book =Book.find(params[:id])
+    @book.update_attributes!(params[:book])
+    redirect_to books_path
   end
 
   def destroy
@@ -29,4 +32,7 @@ class BooksController < ApplicationController
  def browse
 @books=Book.where("user_id != #{current_user.id}")
  end
+def edit
+ @book =Book.find(params[:id])
+end
 end

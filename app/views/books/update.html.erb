@@ -1,2 +1,38 @@
-<h1>Books#update</h1>
-<p>Find me in app/views/books/update.html.erb</p>
+<h1>Update</h1>
+  <%= form_for @books do |f| %>
+  <%= f.error_messages %>
+
+<div class="field">
+  <%= f.label :BookTitle %>
+  <%= f.text_field :title %></div>
+
+<div class="field">
+  <%= f.label :Author %>
+  <%= f.text_field :author %></div>
+
+<div class="field">
+  <%= f.label :Description %>
+  <%= f.text_field :description %></div>
+
+<div class="field">
+  <%= f.label :Language %>
+  <%= f.text_field :language %></div>
+
+<div class="field">
+  <%= f.label :ISBN %>
+  <%= f.text_field :isbn %></div>
+
+<div class="field">
+  <%= f.label :Bookcondition %>
+  <%= f.text_field :condition %></div>
+
+
+
+<div class="field">
+  <%= f.label :Category %>
+  <%= f.text_field :book_category %></div>
+
+
+<div class="actions">
+  <%= f.submit "UPDATE" %></div>
+<% end %>
