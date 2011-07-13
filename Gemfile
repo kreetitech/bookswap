@@ -11,6 +11,10 @@ gem "rails3-generators"
 gem "paperclip"
 
 
+gem "paperclip"
+
+
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

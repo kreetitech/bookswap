@@ -4,15 +4,15 @@
   <ul class="alr">
     <% if current_user %>
       <li><%= link_to "sign out", logout_path %></li>
-      <li><%= link_to "mybook", books_path %></li>
+      <li><%= link_to "mybook", mybooks_path %></li>
       <li><%= link_to "myaccount", user_path(current_user) if current_user %></li>
-      
+
     <% else %>
       <li><%= link_to "sign in", login_path %></li>
       <li><%= link_to "register", signup_path %></li>
        <li><a href="#">tour</a></li>
     <% end %>
-   
+
   </ul>
 </div>
 
