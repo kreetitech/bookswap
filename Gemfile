@@ -8,6 +8,8 @@ gem 'rails', '3.0.9'
 gem 'mysql2', '0.2.7'
 gem "authlogic"
 gem "rails3-generators"
+gem "paperclip"
+
 
 gem "paperclip"
 
