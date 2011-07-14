@@ -44,6 +44,8 @@ visibility:hidden;
 }
 #wrapper
 {
+	width:1004px;
+	margin:0 auto;
 	background:#FFF2E6;
 }
 #title_bar
@@ -76,7 +78,7 @@ visibility:hidden;
 	border-width:2px 0;
 	border-color:#999999;
 	border-style:solid;
-	padding:20px 277px;;
+	padding:20px 156px;;
 }
 #search_bar h3
 {
@@ -221,6 +223,32 @@ visibility:hidden;
 	font-weight:bold;
 	color:#72461E;;
 }
+#content-holder
+{
+	padding:10px 5px 20px;
+	min-height:610px;
+}
+#left-column
+{
+	width:225px;
+	min-height:750px;
+	background:#FFF4E9;
+	border:1px solid #ccc;
+}
+#navigation a
+{
+	display:block;
+	padding:10px 15px;
+	color:#4E2F0F;
+	border-bottom:2px solid #ffffff;
+}
+#right-column
+{
+	padding:0 75px;
+	width:619px;
+}
+
+
 
 
 
