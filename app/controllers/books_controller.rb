@@ -1,9 +1,9 @@
 class BooksController < ApplicationController
   def index
     @books = if params[:mybooks].present?
-               current_user.books
+               current_user.books.paginate(:page => params[:page], :per_page => 10)
              else
-               Book.all
+               Book.paginate(:page => params[:page], :per_page => 10)
              end
   end
 

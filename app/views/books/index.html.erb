@@ -1,4 +1,5 @@
 <h1>Browse Books</h1>
+<%= will_paginate @books %>
 <table>
   <tr>
     <th>BookTitle<th>
@@ -18,12 +19,11 @@
     <td><%= book.language %></td>
     <td><%= book.isbn %></td>
     <td><%= book.condition %></td>
-    <td>
-      <%= link_to 'Add To Inventory', inventories_path(:book_id => book.id), "data-method" => :post %>
+    <td><%= link_to 'Add To Inventory', inventories_path(:book_id => book.id), "data-method" => :post %></td>
 
-      <td><%= link_to 'Destroy', book, :confirm => 'Are you sure?', :method => :delete %></td>
-       <td><%= link_to 'Edit', edit_book_path(book) %></td>
-    </td>
+    <td><%= link_to 'Destroy', book, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Edit', edit_book_path(book) %></td>
+
   </tr>
   <% end %>
 </table>
