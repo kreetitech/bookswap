@@ -13,6 +13,7 @@ Bookswap::Application.routes.draw do
   end
   resources :wishlists
   resources :inventories
+  resources :posts
 
 
   match 'signup' => "users#new",       :as => :signup
