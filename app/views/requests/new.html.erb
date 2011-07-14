@@ -1,2 +1,16 @@
-<h1>Requests#new</h1>
-<p>Find me in app/views/requests/new.html.erb</p>
+<h1>Send email to the owner</h1>
+
+<% form_tag requests_path do  %>
+  <%= hidden_field_tag :receiver_id, params[:user] %>
+<div>
+  <label for="message">Message</label>
+  <%= text_area_tag :message %>
+</div>
+<div>
+  <label for="contact_no">Contact No</label>
+  <%= text_field_tag :contact_no %>
+</div>
+<div>
+  <%= submit_tag "SEND" %>
+</div>
+<% end %>

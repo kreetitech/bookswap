@@ -9,7 +9,10 @@
  </head>
   <body>
     <div id="wrapper">
-      <%= render :partial => "shared/header" %>      
+      <%= render :partial => "shared/header" %>
+      <% if flash[:notice].present? %>
+        <p id="notice"><%= flash[:notice] %></p>
+      <% end %>
       <div id="content-holder" class="clearfix">
 	<div id="right-column" class="alr">
 	  <%= yield %>

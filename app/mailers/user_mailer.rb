@@ -9,6 +9,9 @@ class UserMailer < ActionMailer::Base
   end
 
   def request_book(sender, receiver, message)
+    @user = user
+    @url  = login_url
+    mail(:to => receiver_email, :from => sender_email, :subject => "Book swaping request!")
   end
 
 end

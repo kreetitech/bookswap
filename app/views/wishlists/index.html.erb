@@ -7,6 +7,7 @@
     <th>Language</th>
     <th>ISBN</th>
     <th>Bookcondition</th>
+    <th></th>
   </tr>
   <% @wishlists.each do |mw| %>
   <tr>
@@ -17,6 +18,9 @@
     <td><%= mw.book.language %></td>
     <td><%= mw.book.isbn %></td>
     <td><%= mw.book.condition %></td>
+    <td><%= link_to "Send Request", new_request_path(:user => mw.book.user) %></td>
   </tr>
+
 </table>
+
 <% end %>

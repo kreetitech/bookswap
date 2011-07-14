@@ -20,6 +20,7 @@
     <td><%= book.isbn %></td>
     <td><%= book.condition %></td>
     <td><%= link_to 'Add To Inventory', inventories_path(:book_id => book.id), "data-method" => :post %></td>
+    <td><%= link_to 'Add To Wishlist', wishlists_path(:book_id => book.id), "data-method" => :post %></td>
 
     <td><%= link_to 'Destroy', book, :confirm => 'Are you sure?', :method => :delete %></td>
     <td><%= link_to 'Edit', edit_book_path(book) %></td>

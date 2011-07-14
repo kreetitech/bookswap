@@ -1,9 +1,5 @@
 Bookswap::Application.routes.draw do
-
-  get "requests/create"
-
-  get "requests/new"
-
+  resources :requests
   resources :users
   resources :user_sessions
   resources :books do
