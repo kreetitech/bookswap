@@ -18,10 +18,10 @@
 
 <div id="search_bar">
   <h3 class="all">Search</h3>
-  <input class="all" type="text" />
-  <select class="all">
-    <option></option>
-  </select>
-  <a href="#"><img src="images/search_icon.png" width="21" height="21" alt="" /></a>
-
+  <%= form_tag search_books_path, :method => :get do %>
+    <%= text_field_tag :query, params[:query], :class => "all" %>
+    <%= image_submit_tag("search_icon.png", :width=>"21", :height=>"21", :alt=>"") %></a>
+  <% end %>
 </div>
+
+
