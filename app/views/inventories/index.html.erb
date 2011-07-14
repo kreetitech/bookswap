@@ -1,6 +1,6 @@
 <h1>My Inventory</h1>
 <table>
-<tr>
+  <tr>
     <th>BookTitle<th>
     <th>Author</th>
     <th>Description</th>
@@ -11,7 +11,7 @@
   <% @inventories.each do |mi| %>
   <% if mi.book %>
   <tr>
-    <tr>
+  <tr>
     <td><%= mi.book.title %></td>
     <td><%= mi.book.author %></td>
     <td><%= mi.book.description %></td>
