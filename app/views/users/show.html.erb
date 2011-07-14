@@ -17,6 +17,7 @@
   </tr>
 
   <tr>
+    <td><%= image_tag(@user.photo.url(:thumb)) %></td>
     <td><%=@user.first_name %></td>
     <td><%=@user.last_name %></td>
     <td><%=@user.email %></td>
