@@ -9,19 +9,12 @@
  </head>
   <body>
     <div id="wrapper">
-      <%= render :partial => "shared/header" %>      
-      <div id="content-holder" class="clearfix">
-	<div id="right-column" class="alr">
-	  <%= yield %>
-	</div>
-	<div id="left-column">
-	  <div id="navigation">
-            <%= render :partial => "shared/sidebar" %>
-	  </div>
-	</div>
+      <%= render :partial => "shared/header" %>
+      <div id="main_content" class="clearfix">
+        <%= yield %>
       </div>
       <%= render :partial => "shared/footer" %>
     </div>
   </body>
+  </body>
 </html>
-
