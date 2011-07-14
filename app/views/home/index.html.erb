@@ -1,24 +1,14 @@
 <div id="welcome_box">
   <div id="content_right">
     <ul>
+      <% @books.each do |book| %>
       <li class="clearfix">
-        <img src="images/book_img1.png" width="57" height="57" alt="" class="all" />
-        <p>Sam</p>
-        <p>added: <a href="#">"Mirror Image"</a></p>
-        <p class="light">an hour ago</p>
+        <img src="<%= book.photo.url(:thumb) %>" width="57" height="57" alt="" class="all" />
+        <p><%= book.title %></p>
+        <p>added: <%= link_to book.user.first_name, user_path(book.user) %></p>
+        <p class="light"><%= time_ago_in_words(book.created_at) %> ago</p>
       </li>
-      <li class="clearfix">
-        <img src="images/book_img2.png" width="57" height="57" alt="" class="all" />
-        <p>Princess</p>
-        <p>added: <a href="#">"Brida"</a></p>
-        <p class="light">fifteen minutes back</p>
-      </li>
-      <li class="clearfix">
-        <img src="images/book_img3.png" width="57" height="57" alt="" class="all" />
-        <p class="light">Paula</p>
-        <p class="light">added: <a href="#" class="light">"Brida"</a></p>
-        <p class="light">fifteen minutes back</p>
-      </li>
+      <% end %>
     </ul>
   </div>
 
@@ -29,7 +19,7 @@
       books and get the books you want.<br /><br />It is the best place to make optimum use of your<br />
       old stack of books by giving away to those who need them
       and getting books we want from them.</p>
-    <a href="#" class="register all">REGISTER</a>
+    <a href="/signup"class="register all">REGISTER</a>
     <a href="#" class="start-tour all">START THE TOUR</a>
   </div>
 </div>
@@ -39,45 +29,12 @@
     <h2>People Recently on Books Swap</h2>
   </div>
   <ul>
+    <% @users.each do |user|%>
     <li>
-      <img src="images/people_img1.png" width="57" height="57" alt="" />
-      <p>Paula</p>
-      <p>144 books</p>
+      <img src="<%= user.photo.url(:thumb) %>" width="57" height="57" alt="" />
+      <p><%= link_to user.first_name, user_path(user) %></p>
+      <p><%= pluralize(user.books.count, 'book') %></p>
     </li>
-    <li>
-      <img src="images/people_img2.png" width="57" height="57" alt="" />
-      <p>Sam</p>
-      <p>900 books</p>
-    </li>
-    <li>
-      <img src="images/people_img2.png" width="57" height="57" alt="" />
-      <p>Johnny</p>
-      <p>21 books</p>
-    </li>
-    <li>
-      <img src="images/people_img1.png" width="57" height="57" alt="" />
-      <p>Princess</p>
-      <p>144 books</p>
-    </li>
-    <li>
-      <img src="images/people_img2.png" width="57" height="57" alt="" />
-      <p>Sam</p>
-      <p>900 books</p>
-    </li>
-    <li>
-      <img src="images/people_img1.png" width="57" height="57" alt="" />
-      <p>Nigella</p>
-      <p>1 book</p>
-    </li>
-    <li>
-      <img src="images/people_img2.png" width="57" height="57" alt="" />
-      <p>Johnny</p>
-      <p>21 books</p>
-    </li>
-    <li>
-      <img src="images/people_img1.png" width="57" height="57" alt="" />
-      <p>Paula</p>
-      <p>144 books</p>
-    </li>
+    <% end %>
   </ul>
 </div>

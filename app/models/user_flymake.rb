@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
   has_many :books
   has_many :inventries
   has_many :wishlists
+
+  has_attached_file :photo, :styles => { :thumb => "57x57>" }
 end
