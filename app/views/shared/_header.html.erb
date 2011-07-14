@@ -21,11 +21,10 @@
   <h3 class="all">Search</h3>
   <%= form_tag search_books_path, :method => :get do %>
     <%= text_field_tag :query, params[:query], :class => "all" %>
-<<<<<<< HEAD
+
     <%= image_submit_tag("search_icon.png", :width=>"100", :height=>"20", :alt=>"") %></a>
-=======
-    <%= image_submit_tag("search_icon.png", :style => "width:21px;height:21px", :alt=>"") %></a>
->>>>>>> 6267eedc292d8378523803f91cb7d8801cff52c0
+
+
   <% end %>
 </div>
 
