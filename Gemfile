@@ -9,6 +9,7 @@ gem 'mysql2', '0.2.7'
 gem "authlogic"
 gem "rails3-generators"
 gem "paperclip"
+gem 'will_paginate', '~> 3.0.beta'
 
 
 gem "paperclip"

@@ -1,5 +1,6 @@
 .bundle
 config/database.yml
+public/system
 log/*.log
 log/*.pid
 tmp/
