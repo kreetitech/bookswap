@@ -1,0 +1,9 @@
+<h1>edit</h1>
+  <%= form_for @book, :html => {:multipart => true} do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => "form", :locals => {:f => f} %>
+  <div class="actions">
+    <%= f.submit "UPDATE" %>
+  </div>
+<% end %>
+
