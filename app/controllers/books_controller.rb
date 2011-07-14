@@ -35,7 +35,7 @@ class BooksController < ApplicationController
   end
 
   def search
-    @books = [] #write the search logic
+    @books = Book.where("name is like '%#{params[:query]}%' or author is like '%#{params[:query]}%'")
     render :action => "index"
   end
 end
