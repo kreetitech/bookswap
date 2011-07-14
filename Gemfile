@@ -9,6 +9,10 @@ gem 'mysql2', '0.2.7'
 gem "authlogic"
 gem "rails3-generators"
 
+gem "paperclip"
+
+
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

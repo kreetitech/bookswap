@@ -1,7 +1,3 @@
-<h1>Update</h1>
-  <%= form_for @books do |f| %>
-  <%= f.error_messages %>
-
 <div class="field">
   <%= f.label :BookTitle %>
   <%= f.text_field :title %></div>
@@ -31,8 +27,7 @@
 <div class="field">
   <%= f.label :Category %>
   <%= f.text_field :book_category %></div>
-
-
-<div class="actions">
-  <%= f.submit "UPDATE" %></div>
-<% end %>
+<div class="field">
+  <%= f.label :photo %>
+  <%= f.file_field :photo %>
+</div>

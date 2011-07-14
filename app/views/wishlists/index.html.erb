@@ -1,2 +1,22 @@
-<h1>Wishlists#index</h1>
-<p>Find me in app/views/wishlists/index.html.erb</p>
+<h1>My Wishlist</h1>
+<table>
+  <tr>
+    <th>BookTitle<th>
+    <th>Author</th>
+    <th>Description</th>
+    <th>Language</th>
+    <th>ISBN</th>
+    <th>Bookcondition</th>
+  </tr>
+  <% @wishlists.each do |mw| %>
+  <tr>
+    <tr>
+    <td><%= mw.book.title %></td>
+    <td><%= mw.book.author %></td>
+    <td><%= mw.book.description %></td>
+    <td><%= mw.book.language %></td>
+    <td><%= mw.book.isbn %></td>
+    <td><%= mw.book.condition %></td>
+  </tr>
+</table>
+<% end %>

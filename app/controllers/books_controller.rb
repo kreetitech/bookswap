@@ -1,30 +1,41 @@
 class BooksController < ApplicationController
   def index
-   @books = current_user.books
+    @books = if params[:mybooks].present?
+               current_user.books
+             else
+               Book.all
+             end
   end
-   def show
-     @title = @books.title
-    end
+
+  def show
+    @books = current_user.books
+  end
+
   def new
     @books = Book.new
   end
 
   def create
-    @user =User.first # replace with current user
-    @user.books.create(params[:book])
-    #@books = Book.new(params[:book])
-    #if @books.save!
-      #redirect_to @book
-   # end
+    current_user.books.create(params[:book])
   end
 
   def update
+    @book =Book.find(params[:id])
+    @book.update_attributes!(params[:book])
+    redirect_to books_path
   end
 
   def destroy
-  @book = Book.find(params[:id])
-  @book.destroy
-  redirect_to @book
+    @book = Book.find(params[:id])
+    @book.destroy
+    redirect_to @book
+  end
+  def edit
+    @book =Book.find(params[:id])
   end
 
+  def search
+    @books = [] #write the search logic
+    render :action => "index"
+  end
 end

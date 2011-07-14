@@ -12,6 +12,7 @@
     <div id="wrapper">
       <%= render :partial => "shared/header" %>
       <div id="main_content" class="clearfix">
+        <%= render :partial => "shared/sidebar" unless excluded_page %>
         <%= yield %>
       </div>
       <%= render :partial => "shared/footer" %>

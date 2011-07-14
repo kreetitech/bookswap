@@ -1,4 +1,5 @@
-<h1>Browse Books</h1>
+<h1>Listing Of all Books</h1>
+
 <table>
   <tr>
     <th>BookTitle<th>
@@ -11,7 +12,6 @@
   </tr>
   <% @books.each do |book| %>
   <tr>
-    <td><%= image_tag(book.photo.url(:thumb)) %></td>
     <td><%= book.title %></td>
     <td><%= book.author %></td>
     <td><%= book.description %></td>
@@ -19,13 +19,8 @@
     <td><%= book.isbn %></td>
     <td><%= book.condition %></td>
     <td>
-      <%= link_to 'Add To Inventory', inventories_path(:book_id => book.id), "data-method" => :post %>
-
-      <td><%= link_to 'Destroy', book, :confirm => 'Are you sure?', :method => :delete %></td>
-       <td><%= link_to 'Edit', edit_book_path(book) %></td>
-    </td>
-  </tr>
-  <% end %>
-</table>
-
-
+     <%= link_to 'Add to Wishlist',wishlists_path(:book_id => book.id), :method => :post %>
+      </td>
+    </tr>
+    <% end %>
+   </table>
