@@ -9,9 +9,9 @@ class WishlistsController < ApplicationController
   end
 
   def show
-  @wishlists=current_user.wishlists
+    @wishlists=current_user.wishlists
   end
-  
+
   def destroy
   end
 
