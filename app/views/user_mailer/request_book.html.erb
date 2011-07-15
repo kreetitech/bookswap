@@ -1,0 +1,24 @@
+!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+    <h1>Dear, <%= @receiver.name %></h1>
+    <p><%= simple_format(@message) %></p>
+    <br/>
+    <p>My address is:</p>
+    <p><%= @sender.postal_address %></p>
+    <br/>
+    <p>My contact no is:</p>
+    <p><%= @contact_no %></p>
+    <br/>
+    <p>My country is:</p>
+    <p><%= @country %></p>
+    <br/>
+    <p>My city is:</p>
+    <p><%= @city %></p>
+    <br/>
+  </body>
+</html>
+
