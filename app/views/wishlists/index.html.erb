@@ -11,6 +11,8 @@
   </tr>
   <% @wishlists.each do |mw| %>
   <tr>
+    <tr>
+    <td><%= image_tag(mw.book.photo.url(:thumb)) %></td>
     <td><%= mw.book.title %></td>
     <td><%= mw.book.author %></td>
     <td><%= mw.book.description %></td>

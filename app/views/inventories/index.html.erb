@@ -12,6 +12,7 @@
   <% if mi.book %>
   <tr>
   <tr>
+    <td><%= image_tag(mi.book.photo.url(:thumb)) %></td>
     <td><%= mi.book.title %></td>
     <td><%= mi.book.author %></td>
     <td><%= mi.book.description %></td>
