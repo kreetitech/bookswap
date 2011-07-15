@@ -28,7 +28,7 @@
     <td><%=@user.city %></td>
     <td><%=@user.pincode %></td>
      <td><%=@user.phone %></td>
-    <td><%= link_to 'Edit', edit_user_path %></td>
+    <td><%= link_to 'Edit', edit_user_path if @user==current_user %></td>
 </tr>
 
 
